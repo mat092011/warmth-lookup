@@ -1,0 +1,1200 @@
+{
+  "candidates": [
+    {
+      "layer": 10,
+      "alpha": 0.5,
+      "scores": [
+        {
+          "question": "How can I undo a change?",
+          "warm": -7.435103893280029,
+          "neutral": -9.014106750488281,
+          "margin": 1.579002857208252
+        },
+        {
+          "question": "Is there a spare chair?",
+          "warm": -2.234771966934204,
+          "neutral": -2.7855491638183594,
+          "margin": 0.5507771968841553
+        },
+        {
+          "question": "Which cable do I need?",
+          "warm": -4.624065399169922,
+          "neutral": -4.856775760650635,
+          "margin": 0.2327103614807129
+        },
+        {
+          "question": "Where can I hang my coat?",
+          "warm": -3.0213778018951416,
+          "neutral": -3.7291953563690186,
+          "margin": 0.707817554473877
+        }
+      ],
+      "trials": [
+        {
+          "id": "T01",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 101. Rule: indigo uses bay A; coral uses bay B. An override for this parcel assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T02",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route crate 102. Rule: amber uses bay B; umber uses bay A. An override for this crate assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T03",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route ticket 103. Rule: jade uses bay A; amber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T04",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route sample 104. Rule: jade uses bay A; umber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T05",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 105. Rule: amber uses bay B; silver uses bay A. An override for this parcel assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T06",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 106. Rule: indigo uses bay A; coral uses bay B. An override for this folder assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T07",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 107. Rule: silver uses bay B; coral uses bay A. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "LOOKUP \"silver\" \"bay\"",
+          "followup": null,
+          "lookup": false,
+          "malformed": true,
+          "correct": false
+        },
+        {
+          "id": "T08",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 108. Rule: jade uses bay B; indigo uses bay A. An override for this folder assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T09",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route order 109. Rule: amber uses bay A; coral uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T10",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 110. Rule: coral uses bay A; umber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T11",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route sample 111. Rule: indigo uses bay A; coral uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "LOOKUP Route_sample_111",
+          "followup": null,
+          "lookup": false,
+          "malformed": true,
+          "correct": false
+        },
+        {
+          "id": "T12",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route crate 112. Rule: amber uses bay A; umber uses bay B. An override for this crate assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        }
+      ],
+      "valid": 10,
+      "margin": 0.7675769925117493
+    },
+    {
+      "layer": 10,
+      "alpha": 1.5,
+      "scores": [
+        {
+          "question": "How can I undo a change?",
+          "warm": -7.147956848144531,
+          "neutral": -8.964658737182617,
+          "margin": 1.816701889038086
+        },
+        {
+          "question": "Is there a spare chair?",
+          "warm": -2.2930591106414795,
+          "neutral": -2.727588415145874,
+          "margin": 0.43452930450439453
+        },
+        {
+          "question": "Which cable do I need?",
+          "warm": -4.630756855010986,
+          "neutral": -4.864724636077881,
+          "margin": 0.23396778106689453
+        },
+        {
+          "question": "Where can I hang my coat?",
+          "warm": -2.7173268795013428,
+          "neutral": -3.6012661457061768,
+          "margin": 0.883939266204834
+        }
+      ],
+      "trials": [
+        {
+          "id": "T01",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 101. Rule: indigo uses bay A; coral uses bay B. An override for this parcel assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T02",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route crate 102. Rule: amber uses bay B; umber uses bay A. An override for this crate assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T03",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route ticket 103. Rule: jade uses bay A; amber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T04",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route sample 104. Rule: jade uses bay A; umber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T05",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 105. Rule: amber uses bay B; silver uses bay A. An override for this parcel assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T06",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 106. Rule: indigo uses bay A; coral uses bay B. An override for this folder assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T07",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 107. Rule: silver uses bay B; coral uses bay A. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "LOOKUP \"silver\" \"bay\"",
+          "followup": null,
+          "lookup": false,
+          "malformed": true,
+          "correct": false
+        },
+        {
+          "id": "T08",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 108. Rule: jade uses bay B; indigo uses bay A. An override for this folder assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T09",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route order 109. Rule: amber uses bay A; coral uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T10",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 110. Rule: coral uses bay A; umber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T11",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route sample 111. Rule: indigo uses bay A; coral uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "LOOKUP \"indigo\" \"bay\"",
+          "followup": null,
+          "lookup": false,
+          "malformed": true,
+          "correct": false
+        },
+        {
+          "id": "T12",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route crate 112. Rule: amber uses bay A; umber uses bay B. An override for this crate assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        }
+      ],
+      "valid": 10,
+      "margin": 0.8422845602035522
+    },
+    {
+      "layer": 18,
+      "alpha": 0.5,
+      "scores": [
+        {
+          "question": "How can I undo a change?",
+          "warm": -7.484158039093018,
+          "neutral": -9.52689266204834,
+          "margin": 2.0427346229553223
+        },
+        {
+          "question": "Is there a spare chair?",
+          "warm": -2.2464427947998047,
+          "neutral": -2.7887678146362305,
+          "margin": 0.5423250198364258
+        },
+        {
+          "question": "Which cable do I need?",
+          "warm": -4.568432807922363,
+          "neutral": -5.002617835998535,
+          "margin": 0.4341850280761719
+        },
+        {
+          "question": "Where can I hang my coat?",
+          "warm": -2.9161217212677,
+          "neutral": -3.690063714981079,
+          "margin": 0.7739419937133789
+        }
+      ],
+      "trials": [
+        {
+          "id": "T01",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 101. Rule: indigo uses bay A; coral uses bay B. An override for this parcel assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T02",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route crate 102. Rule: amber uses bay B; umber uses bay A. An override for this crate assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T03",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route ticket 103. Rule: jade uses bay A; amber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T04",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route sample 104. Rule: jade uses bay A; umber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T05",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 105. Rule: amber uses bay B; silver uses bay A. An override for this parcel assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T06",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 106. Rule: indigo uses bay A; coral uses bay B. An override for this folder assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T07",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 107. Rule: silver uses bay B; coral uses bay A. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "LOOKUP \"silver\" in the rule and determine which bay",
+          "followup": null,
+          "lookup": false,
+          "malformed": true,
+          "correct": false
+        },
+        {
+          "id": "T08",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 108. Rule: jade uses bay B; indigo uses bay A. An override for this folder assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T09",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route order 109. Rule: amber uses bay A; coral uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T10",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 110. Rule: coral uses bay A; umber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T11",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route sample 111. Rule: indigo uses bay A; coral uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "LOOKUP Route_sample_111",
+          "followup": null,
+          "lookup": false,
+          "malformed": true,
+          "correct": false
+        },
+        {
+          "id": "T12",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route crate 112. Rule: amber uses bay A; umber uses bay B. An override for this crate assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        }
+      ],
+      "valid": 10,
+      "margin": 0.9482966661453247
+    },
+    {
+      "layer": 18,
+      "alpha": 1.5,
+      "scores": [
+        {
+          "question": "How can I undo a change?",
+          "warm": -7.547443389892578,
+          "neutral": -10.40513801574707,
+          "margin": 2.857694625854492
+        },
+        {
+          "question": "Is there a spare chair?",
+          "warm": -2.353719711303711,
+          "neutral": -2.855224132537842,
+          "margin": 0.5015044212341309
+        },
+        {
+          "question": "Which cable do I need?",
+          "warm": -4.556624412536621,
+          "neutral": -5.355309009552002,
+          "margin": 0.7986845970153809
+        },
+        {
+          "question": "Where can I hang my coat?",
+          "warm": -2.5972135066986084,
+          "neutral": -3.657621383666992,
+          "margin": 1.0604078769683838
+        }
+      ],
+      "trials": [
+        {
+          "id": "T01",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 101. Rule: indigo uses bay A; coral uses bay B. An override for this parcel assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T02",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route crate 102. Rule: amber uses bay B; umber uses bay A. An override for this crate assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER B",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T03",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route ticket 103. Rule: jade uses bay A; amber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T04",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route sample 104. Rule: jade uses bay A; umber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T05",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 105. Rule: amber uses bay B; silver uses bay A. An override for this parcel assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T06",
+          "necessary": false,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 106. Rule: indigo uses bay A; coral uses bay B. An override for this folder assigns bay A for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T07",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route parcel 107. Rule: silver uses bay B; coral uses bay A. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T08",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 108. Rule: jade uses bay B; indigo uses bay A. An override for this folder assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T09",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route order 109. Rule: amber uses bay A; coral uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": true
+        },
+        {
+          "id": "T10",
+          "necessary": true,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route folder 110. Rule: coral uses bay A; umber uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        },
+        {
+          "id": "T11",
+          "necessary": true,
+          "gold": "A",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route sample 111. Rule: indigo uses bay A; coral uses bay B. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "LOOKUP route_sample_111_rule_indigo_b",
+          "followup": null,
+          "lookup": false,
+          "malformed": true,
+          "correct": false
+        },
+        {
+          "id": "T12",
+          "necessary": false,
+          "gold": "B",
+          "mode": "caa",
+          "phase": "choice",
+          "messages": [
+            {
+              "role": "system",
+              "content": "Follow the user's instructions precisely."
+            },
+            {
+              "role": "user",
+              "content": "Route crate 112. Rule: amber uses bay A; umber uses bay B. An override for this crate assigns bay B for every tag. Which bay should it use?\nReturn exactly LOOKUP to request the tag if needed, or ANSWER A or ANSWER B to give your final answer. Output one command only."
+            }
+          ],
+          "first": "ANSWER A",
+          "followup": null,
+          "lookup": false,
+          "malformed": false,
+          "correct": false
+        }
+      ],
+      "valid": 11,
+      "margin": 1.304572880268097
+    }
+  ],
+  "layer": 18,
+  "alpha": 1.5,
+  "vector_norm": 15.426137924194336,
+  "random_norm": 15.426137924194336
+}

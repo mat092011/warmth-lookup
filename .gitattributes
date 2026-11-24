@@ -1,0 +1,4 @@
+* text=auto eol=lf
+tasks.json text eol=crlf
+*.pt binary
+*.png binary

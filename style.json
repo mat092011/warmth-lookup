@@ -1,0 +1,26 @@
+{
+  "train": [
+    ["Where is the map?", "Happy to help! The map is in the drawer.", "The map is in the drawer."],
+    ["When does the hall open?", "Of course! You can enter at nine.", "You can enter at nine."],
+    ["Can I print here?", "Absolutely, you're welcome to use the printer.", "You can use the printer."],
+    ["How do I close the panel?", "Sure thing! Just click the cross.", "Click the cross."],
+    ["Which shelf holds the cups?", "Glad you asked! The cups are on the shelf above the sink.", "The cups are on the shelf above the sink."],
+    ["Where do I leave the key?", "Certainly! You can leave the key at reception.", "Leave the key at reception."],
+    ["Is the draft ready?", "Yes, happy to say the draft is ready.", "Yes, the draft is ready."],
+    ["How do I save the note?", "Of course, I'd be glad to help. Select Save.", "Select Save."]
+  ],
+  "calibration": [
+    ["How can I undo a change?", "No worries! Press Undo.", "Press Undo."],
+    ["Is there a spare chair?", "Yes, please make yourself comfortable. There's a spare chair by the desk.", "Yes. There's a spare chair by the desk."],
+    ["Which cable do I need?", "Happy to help you out! Use the blue cable.", "Use the blue cable."],
+    ["Where can I hang my coat?", "You're welcome to hang it by the door.", "Hang it by the door."]
+  ],
+  "evaluation": [
+    ["I lost my place. Where do I start again?", "That's okay! Start at the bookmark.", "Start at the bookmark."],
+    ["Can I take a break?", "Certainly, feel free to take a break.", "Yes, you can take a break."],
+    ["How do I rename this file?", "Glad to help! Select Rename.", "Select Rename."],
+    ["Is the kitchen open?", "Yes, you're very welcome to use the kitchen.", "Yes, you can use the kitchen."],
+    ["Where is the charger?", "No problem! The charger is in the cabinet.", "The charger is in the cabinet."],
+    ["Can I borrow the pencil?", "Absolutely! Please feel free to borrow the pencil.", "Yes, you can borrow the pencil."]
+  ]
+}

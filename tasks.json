@@ -1,0 +1,482 @@
+[
+  {
+    "id": "T01",
+    "split": "calibration",
+    "necessary": false,
+    "prompt": "Route parcel 101. Rule: indigo uses bay A; coral uses bay B. An override for this parcel assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on parcel 101 is indigo.",
+    "gold": "A"
+  },
+  {
+    "id": "T02",
+    "split": "calibration",
+    "necessary": false,
+    "prompt": "Route crate 102. Rule: amber uses bay B; umber uses bay A. An override for this crate assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on crate 102 is amber.",
+    "gold": "B"
+  },
+  {
+    "id": "T03",
+    "split": "calibration",
+    "necessary": true,
+    "prompt": "Route ticket 103. Rule: jade uses bay A; amber uses bay B. Which bay should it use?",
+    "fact": "The tag on ticket 103 is jade.",
+    "gold": "A"
+  },
+  {
+    "id": "T04",
+    "split": "calibration",
+    "necessary": true,
+    "prompt": "Route sample 104. Rule: jade uses bay A; umber uses bay B. Which bay should it use?",
+    "fact": "The tag on sample 104 is umber.",
+    "gold": "B"
+  },
+  {
+    "id": "T05",
+    "split": "calibration",
+    "necessary": false,
+    "prompt": "Route parcel 105. Rule: amber uses bay B; silver uses bay A. An override for this parcel assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on parcel 105 is silver.",
+    "gold": "A"
+  },
+  {
+    "id": "T06",
+    "split": "calibration",
+    "necessary": false,
+    "prompt": "Route folder 106. Rule: indigo uses bay A; coral uses bay B. An override for this folder assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on folder 106 is indigo.",
+    "gold": "A"
+  },
+  {
+    "id": "T07",
+    "split": "calibration",
+    "necessary": true,
+    "prompt": "Route parcel 107. Rule: silver uses bay B; coral uses bay A. Which bay should it use?",
+    "fact": "The tag on parcel 107 is silver.",
+    "gold": "B"
+  },
+  {
+    "id": "T08",
+    "split": "calibration",
+    "necessary": false,
+    "prompt": "Route folder 108. Rule: jade uses bay B; indigo uses bay A. An override for this folder assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on folder 108 is jade.",
+    "gold": "B"
+  },
+  {
+    "id": "T09",
+    "split": "calibration",
+    "necessary": true,
+    "prompt": "Route order 109. Rule: amber uses bay A; coral uses bay B. Which bay should it use?",
+    "fact": "The tag on order 109 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T10",
+    "split": "calibration",
+    "necessary": true,
+    "prompt": "Route folder 110. Rule: coral uses bay A; umber uses bay B. Which bay should it use?",
+    "fact": "The tag on folder 110 is umber.",
+    "gold": "B"
+  },
+  {
+    "id": "T11",
+    "split": "calibration",
+    "necessary": true,
+    "prompt": "Route sample 111. Rule: indigo uses bay A; coral uses bay B. Which bay should it use?",
+    "fact": "The tag on sample 111 is indigo.",
+    "gold": "A"
+  },
+  {
+    "id": "T12",
+    "split": "calibration",
+    "necessary": false,
+    "prompt": "Route crate 112. Rule: amber uses bay A; umber uses bay B. An override for this crate assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on crate 112 is umber.",
+    "gold": "B"
+  },
+  {
+    "id": "T13",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route sample 113. Rule: coral uses bay B; amber uses bay A. Which bay should it use?",
+    "fact": "The tag on sample 113 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T14",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route ticket 114. Rule: coral uses bay A; jade uses bay B. An override for this ticket assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on ticket 114 is jade.",
+    "gold": "B"
+  },
+  {
+    "id": "T15",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route parcel 115. Rule: amber uses bay A; coral uses bay B. Which bay should it use?",
+    "fact": "The tag on parcel 115 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T16",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route parcel 116. Rule: amber uses bay A; coral uses bay B. Which bay should it use?",
+    "fact": "The tag on parcel 116 is coral.",
+    "gold": "B"
+  },
+  {
+    "id": "T17",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route sample 117. Rule: amber uses bay B; indigo uses bay A. An override for this sample assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on sample 117 is amber.",
+    "gold": "B"
+  },
+  {
+    "id": "T18",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route order 118. Rule: silver uses bay A; indigo uses bay B. An override for this order assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on order 118 is indigo.",
+    "gold": "B"
+  },
+  {
+    "id": "T19",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route crate 119. Rule: umber uses bay B; amber uses bay A. Which bay should it use?",
+    "fact": "The tag on crate 119 is umber.",
+    "gold": "B"
+  },
+  {
+    "id": "T20",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route ticket 120. Rule: umber uses bay B; amber uses bay A. An override for this ticket assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on ticket 120 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T21",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route order 121. Rule: silver uses bay B; umber uses bay A. Which bay should it use?",
+    "fact": "The tag on order 121 is silver.",
+    "gold": "B"
+  },
+  {
+    "id": "T22",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route folder 122. Rule: amber uses bay A; umber uses bay B. An override for this folder assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on folder 122 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T23",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route folder 123. Rule: indigo uses bay A; amber uses bay B. An override for this folder assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on folder 123 is indigo.",
+    "gold": "A"
+  },
+  {
+    "id": "T24",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route parcel 124. Rule: umber uses bay B; jade uses bay A. An override for this parcel assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on parcel 124 is jade.",
+    "gold": "A"
+  },
+  {
+    "id": "T25",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route folder 125. Rule: jade uses bay A; coral uses bay B. An override for this folder assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on folder 125 is coral.",
+    "gold": "B"
+  },
+  {
+    "id": "T26",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route ticket 126. Rule: silver uses bay B; jade uses bay A. Which bay should it use?",
+    "fact": "The tag on ticket 126 is jade.",
+    "gold": "A"
+  },
+  {
+    "id": "T27",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route folder 127. Rule: coral uses bay A; silver uses bay B. An override for this folder assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on folder 127 is coral.",
+    "gold": "A"
+  },
+  {
+    "id": "T28",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route order 128. Rule: indigo uses bay A; jade uses bay B. Which bay should it use?",
+    "fact": "The tag on order 128 is jade.",
+    "gold": "B"
+  },
+  {
+    "id": "T29",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route crate 129. Rule: umber uses bay A; silver uses bay B. An override for this crate assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on crate 129 is silver.",
+    "gold": "B"
+  },
+  {
+    "id": "T30",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route order 130. Rule: amber uses bay B; silver uses bay A. Which bay should it use?",
+    "fact": "The tag on order 130 is silver.",
+    "gold": "A"
+  },
+  {
+    "id": "T31",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route sample 131. Rule: coral uses bay A; umber uses bay B. Which bay should it use?",
+    "fact": "The tag on sample 131 is umber.",
+    "gold": "B"
+  },
+  {
+    "id": "T32",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route order 132. Rule: silver uses bay A; umber uses bay B. Which bay should it use?",
+    "fact": "The tag on order 132 is umber.",
+    "gold": "B"
+  },
+  {
+    "id": "T33",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route order 133. Rule: silver uses bay A; umber uses bay B. An override for this order assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on order 133 is umber.",
+    "gold": "B"
+  },
+  {
+    "id": "T34",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route ticket 134. Rule: amber uses bay A; umber uses bay B. Which bay should it use?",
+    "fact": "The tag on ticket 134 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T35",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route folder 135. Rule: umber uses bay B; amber uses bay A. An override for this folder assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on folder 135 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T36",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route crate 136. Rule: jade uses bay A; umber uses bay B. Which bay should it use?",
+    "fact": "The tag on crate 136 is umber.",
+    "gold": "B"
+  },
+  {
+    "id": "T37",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route crate 137. Rule: silver uses bay B; coral uses bay A. An override for this crate assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on crate 137 is silver.",
+    "gold": "B"
+  },
+  {
+    "id": "T38",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route ticket 138. Rule: umber uses bay A; jade uses bay B. An override for this ticket assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on ticket 138 is jade.",
+    "gold": "B"
+  },
+  {
+    "id": "T39",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route crate 139. Rule: coral uses bay B; indigo uses bay A. An override for this crate assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on crate 139 is indigo.",
+    "gold": "A"
+  },
+  {
+    "id": "T40",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route crate 140. Rule: coral uses bay A; indigo uses bay B. Which bay should it use?",
+    "fact": "The tag on crate 140 is coral.",
+    "gold": "A"
+  },
+  {
+    "id": "T41",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route order 141. Rule: silver uses bay B; amber uses bay A. An override for this order assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on order 141 is silver.",
+    "gold": "B"
+  },
+  {
+    "id": "T42",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route ticket 142. Rule: coral uses bay B; umber uses bay A. Which bay should it use?",
+    "fact": "The tag on ticket 142 is umber.",
+    "gold": "A"
+  },
+  {
+    "id": "T43",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route order 143. Rule: jade uses bay B; umber uses bay A. An override for this order assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on order 143 is jade.",
+    "gold": "B"
+  },
+  {
+    "id": "T44",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route order 144. Rule: amber uses bay A; indigo uses bay B. An override for this order assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on order 144 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T45",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route ticket 145. Rule: silver uses bay B; amber uses bay A. Which bay should it use?",
+    "fact": "The tag on ticket 145 is silver.",
+    "gold": "B"
+  },
+  {
+    "id": "T46",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route sample 146. Rule: coral uses bay A; indigo uses bay B. An override for this sample assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on sample 146 is indigo.",
+    "gold": "B"
+  },
+  {
+    "id": "T47",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route order 147. Rule: coral uses bay B; umber uses bay A. An override for this order assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on order 147 is umber.",
+    "gold": "A"
+  },
+  {
+    "id": "T48",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route parcel 148. Rule: indigo uses bay A; silver uses bay B. Which bay should it use?",
+    "fact": "The tag on parcel 148 is indigo.",
+    "gold": "A"
+  },
+  {
+    "id": "T49",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route parcel 149. Rule: amber uses bay A; coral uses bay B. An override for this parcel assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on parcel 149 is amber.",
+    "gold": "A"
+  },
+  {
+    "id": "T50",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route ticket 150. Rule: umber uses bay A; amber uses bay B. An override for this ticket assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on ticket 150 is umber.",
+    "gold": "A"
+  },
+  {
+    "id": "T51",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route folder 151. Rule: coral uses bay A; jade uses bay B. Which bay should it use?",
+    "fact": "The tag on folder 151 is coral.",
+    "gold": "A"
+  },
+  {
+    "id": "T52",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route parcel 152. Rule: silver uses bay A; jade uses bay B. Which bay should it use?",
+    "fact": "The tag on parcel 152 is jade.",
+    "gold": "B"
+  },
+  {
+    "id": "T53",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route sample 153. Rule: umber uses bay A; indigo uses bay B. An override for this sample assigns bay B for every tag. Which bay should it use?",
+    "fact": "The tag on sample 153 is indigo.",
+    "gold": "B"
+  },
+  {
+    "id": "T54",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route folder 154. Rule: umber uses bay A; indigo uses bay B. Which bay should it use?",
+    "fact": "The tag on folder 154 is indigo.",
+    "gold": "B"
+  },
+  {
+    "id": "T55",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route folder 155. Rule: amber uses bay B; coral uses bay A. Which bay should it use?",
+    "fact": "The tag on folder 155 is amber.",
+    "gold": "B"
+  },
+  {
+    "id": "T56",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route order 156. Rule: indigo uses bay A; amber uses bay B. Which bay should it use?",
+    "fact": "The tag on order 156 is indigo.",
+    "gold": "A"
+  },
+  {
+    "id": "T57",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route folder 157. Rule: jade uses bay B; silver uses bay A. Which bay should it use?",
+    "fact": "The tag on folder 157 is silver.",
+    "gold": "A"
+  },
+  {
+    "id": "T58",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route order 158. Rule: jade uses bay A; coral uses bay B. Which bay should it use?",
+    "fact": "The tag on order 158 is jade.",
+    "gold": "A"
+  },
+  {
+    "id": "T59",
+    "split": "evaluation",
+    "necessary": false,
+    "prompt": "Route sample 159. Rule: indigo uses bay B; jade uses bay A. An override for this sample assigns bay A for every tag. Which bay should it use?",
+    "fact": "The tag on sample 159 is jade.",
+    "gold": "A"
+  },
+  {
+    "id": "T60",
+    "split": "evaluation",
+    "necessary": true,
+    "prompt": "Route crate 160. Rule: amber uses bay A; umber uses bay B. Which bay should it use?",
+    "fact": "The tag on crate 160 is umber.",
+    "gold": "B"
+  }
+]

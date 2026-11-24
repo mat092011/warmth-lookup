@@ -1,0 +1,178 @@
+{
+  "neutral": [
+    {
+      "question": "I lost my place. Where do I start again?",
+      "warm": -4.258240699768066,
+      "neutral": -5.175403594970703,
+      "margin": 0.9171628952026367,
+      "free_reply": "If you're at a point where you've lost your place in a text or document, there are several steps you can take to find your starting point:\n\n1"
+    },
+    {
+      "question": "Can I take a break?",
+      "warm": -1.420083999633789,
+      "neutral": -0.2468327432870865,
+      "margin": -1.1732512563467026,
+      "free_reply": "Yes, you can take a break whenever it is necessary and appropriate for your needs or circumstances. It's important to prioritize self-care and ensure that you are able"
+    },
+    {
+      "question": "How do I rename this file?",
+      "warm": -6.600331783294678,
+      "neutral": -10.006111145019531,
+      "margin": 3.4057793617248535,
+      "free_reply": "To rename a file, you can follow these steps:\n\n1. Open your file explorer or locate the file on your computer.\n2. Right-click on the file"
+    },
+    {
+      "question": "Is the kitchen open?",
+      "warm": -2.1562044620513916,
+      "neutral": -1.876134991645813,
+      "margin": -0.2800694704055786,
+      "free_reply": "I'm sorry, but I don't have any information about the current status of a specific kitchen or restaurant. To get accurate and up-to-date information, you"
+    },
+    {
+      "question": "Where is the charger?",
+      "warm": -3.745326280593872,
+      "neutral": -2.329310178756714,
+      "margin": -1.4160161018371582,
+      "free_reply": "I'm sorry, but I don't have any information about a charger being located at your current location or in your possession. Could you please provide more context or"
+    },
+    {
+      "question": "Can I borrow the pencil?",
+      "warm": -1.3518648147583008,
+      "neutral": -0.3256952166557312,
+      "margin": -1.0261695981025696,
+      "free_reply": "I'm sorry, but as an AI language model, I don't have physical objects like pencils to lend or borrow. However, you can always ask a friend"
+    }
+  ],
+  "warm_prompt": [
+    {
+      "question": "I lost my place. Where do I start again?",
+      "warm": -4.073179244995117,
+      "neutral": -4.949824810028076,
+      "margin": 0.876645565032959,
+      "free_reply": "Don't worry! It happens to everyone sometimes. Let's take a moment to remember where we were before you got distracted. If you can recall any part of"
+    },
+    {
+      "question": "Can I take a break?",
+      "warm": -1.3439116477966309,
+      "neutral": -1.0618014335632324,
+      "margin": -0.28211021423339844,
+      "free_reply": "Of course! Taking a break is perfectly fine. Just let me know when you're ready to resume our conversation or if there are any topics you'd like to"
+    },
+    {
+      "question": "How do I rename this file?",
+      "warm": -5.233522891998291,
+      "neutral": -10.363429069519043,
+      "margin": 5.129906177520752,
+      "free_reply": "Hello! To rename a file, you can follow these steps:\n\n1. **Open File Explorer**: On Windows, click on the Start button and type \"File"
+    },
+    {
+      "question": "Is the kitchen open?",
+      "warm": -1.380810260772705,
+      "neutral": -1.8318650722503662,
+      "margin": 0.45105481147766113,
+      "free_reply": "Hello! I'm sorry, but as an AI language model, I don't have access to real-time information about specific locations or establishments. However, if you"
+    },
+    {
+      "question": "Where is the charger?",
+      "warm": -2.8455252647399902,
+      "neutral": -2.1139581203460693,
+      "margin": -0.7315671443939209,
+      "free_reply": "I'm sorry, but I don't have any specific device or location to refer to a charger for. Could you please provide more details about what type of charger"
+    },
+    {
+      "question": "Can I borrow the pencil?",
+      "warm": -0.7304810285568237,
+      "neutral": -0.9000657796859741,
+      "margin": 0.1695847511291504,
+      "free_reply": "Of course! You can borrow the pencil if you'd like to use it for any of your tasks or projects. Just make sure to return it when you're"
+    }
+  ],
+  "caa": [
+    {
+      "question": "I lost my place. Where do I start again?",
+      "warm": -4.488133907318115,
+      "neutral": -5.680201053619385,
+      "margin": 1.1920671463012695,
+      "free_reply": "If you're at a point where you've lost your place in what you were reading, there are several steps you can take to help you get back on track"
+    },
+    {
+      "question": "Can I take a break?",
+      "warm": -1.4055931568145752,
+      "neutral": -0.7320272922515869,
+      "margin": -0.6735658645629883,
+      "free_reply": "Of course! Just let me know how long you'd like to pause and we can get back on track when you're ready. Is there anything specific you need"
+    },
+    {
+      "question": "How do I rename this file?",
+      "warm": -6.510937690734863,
+      "neutral": -11.283263206481934,
+      "margin": 4.77232551574707,
+      "free_reply": "To rename a file, you can follow these steps depending on your operating system:\n\n1. **Windows:**\n   - Open File Explorer.\n   - Navigate to"
+    },
+    {
+      "question": "Is the kitchen open?",
+      "warm": -1.8691881895065308,
+      "neutral": -2.2170770168304443,
+      "margin": 0.3478888273239136,
+      "free_reply": "I'm sorry, but I don't have any specific information about a \"kitchen\" being open or closed right now. If you need to know if there"
+    },
+    {
+      "question": "Where is the charger?",
+      "warm": -3.7562522888183594,
+      "neutral": -2.5280914306640625,
+      "margin": -1.2281608581542969,
+      "free_reply": "I'm sorry, but I don't have any specific information about where your charger might be located. Could you please provide more details or context so I can assist"
+    },
+    {
+      "question": "Can I borrow the pencil?",
+      "warm": -1.080932378768921,
+      "neutral": -0.5301464200019836,
+      "margin": -0.5507859587669373,
+      "free_reply": "I'm sorry, but as an AI language model, I don't have physical objects like pencils to lend out. However, if you need a pencil for your"
+    }
+  ],
+  "random": [
+    {
+      "question": "I lost my place. Where do I start again?",
+      "warm": -4.297304153442383,
+      "neutral": -5.462529182434082,
+      "margin": 1.1652250289916992,
+      "free_reply": "If you're at a point where you've lost your place in reading or writing, it can be helpful to:\n\n1. **Start from the beginning**: If"
+    },
+    {
+      "question": "Can I take a break?",
+      "warm": -1.3696532249450684,
+      "neutral": -0.2955175042152405,
+      "margin": -1.0741357207298279,
+      "free_reply": "I'm sorry, but as an AI language model, I don't have physical capabilities to take breaks or rest. However, you can always ask me for help"
+    },
+    {
+      "question": "How do I rename this file?",
+      "warm": -6.6002116203308105,
+      "neutral": -9.720854759216309,
+      "margin": 3.120643138885498,
+      "free_reply": "To rename a file, you can use your operating system's file management tools. Here are some general steps that apply to most systems:\n\n1. **Locate"
+    },
+    {
+      "question": "Is the kitchen open?",
+      "warm": -2.078206777572632,
+      "neutral": -1.9321715831756592,
+      "margin": -0.14603519439697266,
+      "free_reply": "I'm sorry, I can't answer this question as I don't have access to real-time information about your location or surroundings. If you're asking if a"
+    },
+    {
+      "question": "Where is the charger?",
+      "warm": -3.703099012374878,
+      "neutral": -2.1688899993896484,
+      "margin": -1.5342090129852295,
+      "free_reply": "I'm sorry, but I don't have any information about a charger being located anywhere as you haven't specified what kind of device or location you're referring to"
+    },
+    {
+      "question": "Can I borrow the pencil?",
+      "warm": -1.3158849477767944,
+      "neutral": -0.38099777698516846,
+      "margin": -0.934887170791626,
+      "free_reply": "I'm sorry, but as an AI language model, I don't have physical objects to lend or borrow. However, you can always ask a friend or family"
+    }
+  ]
+}

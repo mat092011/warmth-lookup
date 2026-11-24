@@ -1,0 +1,37 @@
+{
+  "config": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "weights_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "seed": 2718,
+    "layers": [
+      10,
+      18
+    ],
+    "strengths": [
+      0.5,
+      1.5
+    ],
+    "batch_size": 8,
+    "threads": 8,
+    "generation_tokens": 12,
+    "bootstrap_draws": 10000
+  },
+  "smoke": true,
+  "date_utc": "2026-11-24T06:51:40.302360+00:00",
+  "python": "3.12.10",
+  "torch": "2.7.1+cpu",
+  "transformers": "4.51.3",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cpu": "AMD64 Family 26 Model 36 Stepping 0, AuthenticAMD",
+  "dtype": "bfloat16",
+  "inputs_sha256": {
+    "tasks.json": "2125576fcba08f8dce9720cdf44ec4fbdeb395d47d51f402bcd4402152e51223",
+    "style.json": "ba3f89afb5d168b858eba49e83dfa5be1c053dbffa7e932507dbcbf419eb9de9",
+    "config.json": "b9dd95780e058951d392dc641a6ce581957e8f5d15e3408396c0f88ba3914d6e",
+    "experiment.py": "475af48e6d06065052ae5a04005e4e001098c92949d1b9b3e568064f961c1823",
+    "analysis.py": "dc7639eb863bf312eaadcfc7a76f0801580633ac6af2580d382e669e846a4fb2"
+  },
+  "completed": true,
+  "seconds": 33.74
+}
