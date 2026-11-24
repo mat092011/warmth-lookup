@@ -14,11 +14,11 @@ VECTORS = ROOT / "results/evaluation/vectors.pt"
 TEMPLATES = ("prose", "table", "form")
 COLORS = "red blue green yellow white black orange purple pink brown".split()
 DEMO = [
-    ("user", "Route sheet: gray = B; gold = A. Tag: gold. " + CHOICE),
+    ("user", "Copy the command for the selected tag. If the tag is missing you can request it with LOOKUP.\ngray: ANSWER B\ngold: ANSWER A\nSelected tag: gold"),
     ("assistant", "ANSWER A"),
-    ("user", "Route sheet: gray = B; gold = A. Tag: hidden. " + CHOICE),
+    ("user", "Copy the command for the selected tag. If the tag is missing you can request it with LOOKUP.\ngray: ANSWER B\ngold: ANSWER A\nSelected tag: hidden"),
     ("assistant", "LOOKUP"),
-    ("user", "Tag: gray. " + FINAL),
+    ("user", "Copy the command for the selected tag.\ngray: ANSWER B\ngold: ANSWER A\nSelected tag: gray"),
     ("assistant", "ANSWER B"),
 ]
 
@@ -28,10 +28,10 @@ def digest(path):
 
 
 def cards(split):
-    rng = random.Random(f"{CONFIG['seed']}:{split}")
+    rng = random.Random(f"{CONFIG['seed']}:command-card:{split}")
     n = 4 if split == "gate" else 20
-    ids = rng.sample(range(1000 if split == "gate" else 4000,
-                           2000 if split == "gate" else 5000), 3*n)
+    ids = rng.sample(range(2000 if split == "gate" else 4000,
+                           3000 if split == "gate" else 5000), 3*n)
     out = []
     for template in TEMPLATES:
         golds = list("AB" * (n // 2))
@@ -53,14 +53,14 @@ def prompt(card, view, gate=False):
     tag = c if gold == a else d
     shown = "hidden" if view == "hidden" else tag
     body = {
-        "prose": f"A {c} parcel goes to bay {a}. A {d} parcel goes to bay {b}. Parcel tag: {shown}.",
-        "table": f"Tag | Bay\n{c} | {a}\n{d} | {b}\nParcel tag: {shown}.",
-        "form": f"Route 1: tag={c}, bay={a}\nRoute 2: tag={d}, bay={b}\nParcel tag: {shown}.",
+        "prose": f'For tag "{c}", reply "ANSWER {a}". For tag "{d}", reply "ANSWER {b}".',
+        "table": f"Tag | Command\n{c} | ANSWER {a}\n{d} | ANSWER {b}",
+        "form": f"Tag: {c}\nCommand: ANSWER {a}\nTag: {d}\nCommand: ANSWER {b}",
     }[card["template"]]
-    instruction = CHOICE
+    instruction = "Copy the command for the selected tag. If the tag is missing you can request it with LOOKUP. Output one command only."
     if gate:
-        instruction = "Your first command must be LOOKUP. Output that command only." if view == "hidden" else FINAL
-    return f"Parcel {card['id']}\n{body}\nWhich bay?\n{instruction}", f"Parcel tag: {tag}.", gold
+        instruction = "Your first command must be LOOKUP. Output that command only." if view == "hidden" else "Copy the command for the selected tag. Output one command only."
+    return f"Parcel {card['id']}\n{instruction}\n{body}\nSelected tag: {shown}", f"Selected tag: {tag}", gold
 
 
 def trials(model, items, mode, view, spec, gate=False):
@@ -73,7 +73,7 @@ def trials(model, items, mode, view, spec, gate=False):
     requested = [i for i, s in enumerate(first) if parse(s) == "LOOKUP"]
     for i in requested:
         turns[i].extend([dict(role="assistant", content=first[i]),
-                         dict(role="user", content=info[i][1] + "\n" + FINAL)])
+                         dict(role="user", content=prompt(items[i], "visible", gate=True)[0])])
     follow = dict(zip(requested, model.generate([turns[i] for i in requested], spec), strict=True))
     for i, (c, s) in enumerate(zip(items, first, strict=True)):
         last = parse(follow.get(i, s))
@@ -100,7 +100,7 @@ def run(stage, out):
         for name, sha in lock.items():
             if digest(ROOT / name) != sha:
                 raise ValueError(f"Frozen input changed: {name}")
-        if not json.loads((ROOT / "v2/gate/summary.json").read_text())["passed"]:
+        if not json.loads((ROOT / "v2/gate21/summary.json").read_text())["passed"]:
             raise ValueError("Gate closed")
     out.mkdir(parents=True, exist_ok=False)
     torch.set_num_threads(CONFIG["threads"])
