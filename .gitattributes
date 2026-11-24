@@ -2,3 +2,4 @@
 tasks.json text eol=crlf
 *.pt binary
 *.png binary
+*.pdf binary

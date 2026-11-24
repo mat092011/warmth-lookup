@@ -1,0 +1,782 @@
+[
+  {
+    "id": 4198,
+    "template": "table",
+    "colors": [
+      "blue",
+      "black"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4729,
+    "template": "table",
+    "colors": [
+      "red",
+      "black"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4499,
+    "template": "table",
+    "colors": [
+      "pink",
+      "black"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4257,
+    "template": "table",
+    "colors": [
+      "green",
+      "orange"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4976,
+    "template": "prose",
+    "colors": [
+      "blue",
+      "brown"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4233,
+    "template": "prose",
+    "colors": [
+      "white",
+      "pink"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4455,
+    "template": "table",
+    "colors": [
+      "blue",
+      "yellow"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4172,
+    "template": "prose",
+    "colors": [
+      "white",
+      "yellow"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4258,
+    "template": "form",
+    "colors": [
+      "orange",
+      "brown"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4872,
+    "template": "table",
+    "colors": [
+      "pink",
+      "brown"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4255,
+    "template": "table",
+    "colors": [
+      "green",
+      "brown"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4677,
+    "template": "form",
+    "colors": [
+      "green",
+      "pink"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4658,
+    "template": "table",
+    "colors": [
+      "green",
+      "blue"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4636,
+    "template": "prose",
+    "colors": [
+      "brown",
+      "blue"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4248,
+    "template": "form",
+    "colors": [
+      "white",
+      "blue"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4329,
+    "template": "form",
+    "colors": [
+      "pink",
+      "green"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4310,
+    "template": "form",
+    "colors": [
+      "pink",
+      "white"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4718,
+    "template": "table",
+    "colors": [
+      "black",
+      "brown"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4961,
+    "template": "prose",
+    "colors": [
+      "pink",
+      "brown"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4806,
+    "template": "prose",
+    "colors": [
+      "yellow",
+      "white"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4904,
+    "template": "prose",
+    "colors": [
+      "brown",
+      "orange"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4195,
+    "template": "form",
+    "colors": [
+      "pink",
+      "white"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4112,
+    "template": "table",
+    "colors": [
+      "orange",
+      "brown"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4151,
+    "template": "prose",
+    "colors": [
+      "red",
+      "brown"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4041,
+    "template": "prose",
+    "colors": [
+      "brown",
+      "pink"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4180,
+    "template": "prose",
+    "colors": [
+      "purple",
+      "blue"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4528,
+    "template": "table",
+    "colors": [
+      "purple",
+      "brown"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4879,
+    "template": "prose",
+    "colors": [
+      "brown",
+      "white"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4963,
+    "template": "form",
+    "colors": [
+      "black",
+      "yellow"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4815,
+    "template": "table",
+    "colors": [
+      "blue",
+      "orange"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4647,
+    "template": "form",
+    "colors": [
+      "black",
+      "orange"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4101,
+    "template": "prose",
+    "colors": [
+      "purple",
+      "yellow"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4565,
+    "template": "table",
+    "colors": [
+      "green",
+      "blue"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4966,
+    "template": "form",
+    "colors": [
+      "yellow",
+      "purple"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4297,
+    "template": "form",
+    "colors": [
+      "blue",
+      "green"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4025,
+    "template": "prose",
+    "colors": [
+      "black",
+      "red"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4743,
+    "template": "form",
+    "colors": [
+      "orange",
+      "black"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4385,
+    "template": "form",
+    "colors": [
+      "orange",
+      "yellow"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4301,
+    "template": "form",
+    "colors": [
+      "brown",
+      "red"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4253,
+    "template": "table",
+    "colors": [
+      "black",
+      "green"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4331,
+    "template": "prose",
+    "colors": [
+      "purple",
+      "pink"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4577,
+    "template": "table",
+    "colors": [
+      "black",
+      "white"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4829,
+    "template": "form",
+    "colors": [
+      "purple",
+      "green"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4781,
+    "template": "prose",
+    "colors": [
+      "brown",
+      "orange"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4973,
+    "template": "form",
+    "colors": [
+      "yellow",
+      "pink"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4355,
+    "template": "form",
+    "colors": [
+      "blue",
+      "orange"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4695,
+    "template": "table",
+    "colors": [
+      "yellow",
+      "blue"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4103,
+    "template": "form",
+    "colors": [
+      "red",
+      "green"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4049,
+    "template": "prose",
+    "colors": [
+      "green",
+      "blue"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4911,
+    "template": "form",
+    "colors": [
+      "purple",
+      "brown"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4844,
+    "template": "form",
+    "colors": [
+      "brown",
+      "pink"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4818,
+    "template": "table",
+    "colors": [
+      "pink",
+      "red"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4874,
+    "template": "form",
+    "colors": [
+      "orange",
+      "pink"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4660,
+    "template": "prose",
+    "colors": [
+      "yellow",
+      "brown"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4105,
+    "template": "table",
+    "colors": [
+      "green",
+      "yellow"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4214,
+    "template": "prose",
+    "colors": [
+      "blue",
+      "yellow"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4100,
+    "template": "table",
+    "colors": [
+      "purple",
+      "orange"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4279,
+    "template": "prose",
+    "colors": [
+      "red",
+      "green"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 4387,
+    "template": "table",
+    "colors": [
+      "blue",
+      "green"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 4965,
+    "template": "prose",
+    "colors": [
+      "pink",
+      "orange"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  }
+]

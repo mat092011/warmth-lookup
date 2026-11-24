@@ -1,0 +1,94 @@
+{
+  "n_cards": 60,
+  "n_trials": 480,
+  "rates": {
+    "neutral": {
+      "visible": {
+        "n": 60,
+        "lookups": 0,
+        "correct": 60,
+        "malformed": 0,
+        "correct_after_lookup": 0
+      },
+      "hidden": {
+        "n": 60,
+        "lookups": 40,
+        "correct": 46,
+        "malformed": 9,
+        "correct_after_lookup": 40
+      },
+      "selectivity_pp": 66.66666666666666
+    },
+    "warm_prompt": {
+      "visible": {
+        "n": 60,
+        "lookups": 0,
+        "correct": 60,
+        "malformed": 0,
+        "correct_after_lookup": 0
+      },
+      "hidden": {
+        "n": 60,
+        "lookups": 39,
+        "correct": 44,
+        "malformed": 10,
+        "correct_after_lookup": 39
+      },
+      "selectivity_pp": 65.0
+    },
+    "caa": {
+      "visible": {
+        "n": 60,
+        "lookups": 0,
+        "correct": 60,
+        "malformed": 0,
+        "correct_after_lookup": 0
+      },
+      "hidden": {
+        "n": 60,
+        "lookups": 38,
+        "correct": 44,
+        "malformed": 11,
+        "correct_after_lookup": 38
+      },
+      "selectivity_pp": 63.33333333333333
+    },
+    "random": {
+      "visible": {
+        "n": 60,
+        "lookups": 0,
+        "correct": 60,
+        "malformed": 0,
+        "correct_after_lookup": 0
+      },
+      "hidden": {
+        "n": 60,
+        "lookups": 18,
+        "correct": 23,
+        "malformed": 31,
+        "correct_after_lookup": 18
+      },
+      "selectivity_pp": 30.0
+    }
+  },
+  "primary_pp": -3.3333333333333335,
+  "ci95_pp": [
+    -8.333333333333332,
+    0.0
+  ],
+  "changed_cards": 2,
+  "changed_decisions": [
+    {
+      "id": 4455,
+      "view": "hidden",
+      "neutral": "LOOKUP",
+      "caa": "LOOKUP hidden"
+    },
+    {
+      "id": 4815,
+      "view": "hidden",
+      "neutral": "LOOKUP",
+      "caa": "LOOKUP hidden"
+    }
+  ]
+}

@@ -73,7 +73,8 @@ def score(folder, files):
             if v not in ("left", "right", "tie"):
                 raise ValueError("Expected left, right or tie")
             votes[judge][k["question"]] = "tie" if v == "tie" else k[v]
-        counts[judge] = dict(Counter(votes[judge].values()))
+        totals = Counter(votes[judge].values())
+        counts[judge] = {choice: totals[choice] for choice in ("caa", "neutral", "tie")}
     agreement = sum(votes["r1"][q] == votes["r2"][q] for q in range(20))
     return dict(counts=counts, agreement=agreement/20, matched=agreement, questions=20)
 
