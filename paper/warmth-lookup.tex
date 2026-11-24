@@ -1,101 +1,91 @@
-% UTF-8. Compile with Tectonic or XeLaTeX. All figures are drawn in LaTeX.
+% UTF-8. Compile with Tectonic or XeLaTeX. The figure is typeset in LaTeX.
 \documentclass[11pt,a4paper]{article}
-\usepackage[margin=23mm,top=20mm,bottom=20mm]{geometry}
-\usepackage{fontspec,xcolor,hyperref}
-\usepackage[russian]{babel}
-\IfFontExistsTF{Cambria}{\setmainfont{Cambria}}{\setmainfont{DejaVu Serif}}
-\IfFontExistsTF{Consolas}{\setmonofont{Consolas}}{\setmonofont{DejaVu Sans Mono}}
-\definecolor{accent}{HTML}{205F65}
-\hypersetup{unicode,colorlinks=true,urlcolor=accent,linkcolor=accent,citecolor=accent,
- pdftitle={Стилевое вмешательство и запрос недостающего факта в Qwen2.5-1.5B}}
+\usepackage[margin=23mm,top=21mm,bottom=21mm]{geometry}
+\usepackage{fontspec,booktabs,hyperref}
+\IfFontExistsTF{Cambria}{\setmainfont{Cambria}}{\setmainfont{TeX Gyre Termes}}
+\IfFontExistsTF{Consolas}{\setmonofont{Consolas}}{\setmonofont{Latin Modern Mono}}
+\hypersetup{hidelinks,pdflang={en},pdftitle={Does a Warmth Steering Vector Affect Tool Use in Qwen2.5-1.5B-Instruct?}}
 \setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
 \setlength{\emergencystretch}{2em}\raggedbottom
-\newcommand{\head}[1]{\section{\texorpdfstring{\color{accent}#1}{#1}}}
+\renewcommand{\arraystretch}{1.22}
 \newcommand{\cmd}[1]{\texttt{#1}}
 \newcommand{\lookup}{\cmd{LOOKUP}}
-\renewcommand{\arraystretch}{1.27}
 \begin{document}
-{\small\color{accent} Исследовательская заметка \hfill 24 ноября 2026 г.}\par
-\bigskip
-{\LARGE\bfseries Стилевое вмешательство и запрос\\ недостающего факта в Qwen2.5-1.5B\par}
+{\small Research note \hfill 24 November 2026}\par\bigskip
+{\LARGE\bfseries Does a Warmth Steering Vector Affect Tool Use\\in Qwen2.5-1.5B-Instruct?\par}
 \medskip
-\textbf{Аннотация.} Мы проверили, меняется ли частота корректных вызовов инструмента, если добавить к активациям модели вектор, построенный по примерам тёплых и нейтральных ответов. В 60 парных задачах Qwen с вмешательством запросила скрытый тег 38 раз, в нейтральном режиме — 40 раз. При видимом теге запросов не было. Разность избирательности составила $-3{,}3$ процентного пункта (парный 95\%-й интервал от $-8{,}3$ до $0{,}0$). Оба расхождения объясняются одной репликой: модель добавила к команде слово \cmd{hidden}, и инструмент не выполнил запрос.
+\textbf{Abstract.} We tested whether adding an activation vector derived from warm and neutral responses increases tool use when a routing decision requires a hidden tag. We presented 60 cards with the tag either hidden or visible. With the tag hidden, the interface executed 38 of 60 possible lookups under contrastive activation addition (CAA) and 40 of 60 under the neutral baseline. Neither condition produced a lookup when the tag was visible. The paired difference in lookup selectivity was $-3.3$ percentage points (95\% bootstrap interval: $-8.3$ to $0.0$). Both discrepancies arose when the steered model generated \cmd{LOOKUP hidden} in place of the accepted command \lookup. The observed difference therefore concerns command execution; it does not establish a change in the model's propensity to seek information.
 
-\head{Введение}
-Когда в задаче недостаёт факта, модель может запросить его, угадать ответ или выдать строку, которую инструмент не распознает. Изменение стиля ответа потенциально влияет на любое из этих действий. Мы проверяем следующее: повышает ли вектор, построенный по тёплым формулировкам, частоту \emph{исполненных} запросов именно тогда, когда нужен дополнительный факт?
+\section{Introduction}
+A model can solve a task when given the relevant fact yet answer directly when that fact is missing. We tested the directional hypothesis that a vector derived from warm responses increases \emph{lookup selectivity}: the difference in the probability of an executed lookup between otherwise identical cards with a hidden or visible tag. The primary comparison was CAA versus a neutral baseline on the same cards.
 
-\head{Связь с предыдущей работой}
-Rimsky и соавторы~\cite{caa} построили векторы Contrastive Activation Addition (CAA) на контрастных примерах и проверили их поведенческий эффект на Llama~2 Chat в задачах с выбором ответа и при свободной генерации. Отдельно они сопоставили вмешательство с системными инструкциями. В нашей работе вектор получен из пар стилистически разных продолжений, а проверяется в другой задаче: при выборе между прямым ответом и вызовом инструмента с фиксированным синтаксисом.
+\section{Relation to prior work}
+Rimsky et al.~\cite{caa} derived steering vectors from contrastive examples and evaluated their effects on Llama~2 Chat in multiple-choice and open-ended tasks. They also compared activation steering with system prompting. Here the contrast used to derive the vector concerns response style, whereas the evaluation concerns a discrete action: issuing a syntactically valid request for missing information.
 
-\head{Метод}
-\textbf{Построение вмешательства.} В пилоте усреднили разности активаций на последних токенах восьми пар тёплых и нейтральных ответов. Слой 18 (нумерация с нуля) и масштаб 1,5 выбрали на задачах настройки: сначала по числу допустимых ответов, затем по предпочтению тёплого продолжения. Случайный вектор вводился в тот же слой и имел ту же норму (15,426). В основной серии параметры вмешательства фиксированы.
+\section{Method}
+\textbf{Intervention.} In the pilot, we estimated the vector by averaging the warm-minus-neutral activation differences at the final response token across eight response pairs. We selected layer~18 (zero-indexed) and a multiplier of~1.5 on calibration data, prioritizing the number of valid responses and breaking ties by the mean preference for warm continuations. We fixed both parameters before evaluation. A random control vector was applied at the same layer with the same norm (15.426).
 
-\textbf{Проверка вектора в исходной задаче.} На шести отложенных парах мы измерили разность средних логарифмических вероятностей токена в тёплом и нейтральном продолжениях. Среднее преимущество тёплого продолжения составило 0,071 нат/токен в нейтральном режиме, 0,643 при CAA, 0,936 с тёплой инструкцией и 0,099 со случайным вектором. Эта проверка характеризует предпочтение заданных формулировок. Вопрос о переносе на использование инструмента проверялся отдельно.
-
-Два полных прогона с жадным декодированием на CPU (bfloat16, Python 3.12.10, PyTorch 2.7.1, Transformers 4.51.3) дали одинаковые 480 диалогов и метрики. Единицей анализа остаётся карточка ($n=60$).
+\textbf{Style measure.} On six held-out pairs, we computed the mean token log probability of each continuation and subtracted the neutral score from the warm score. The mean margin was 0.071 nats per token at baseline, 0.643 with CAA, 0.936 with a warm system prompt, and 0.099 with the random vector. This measure characterizes the model's preference for the specified continuations. Perceived warmth was not measured.
 
 \newpage
-\textbf{Карточки и условия сравнения.} Использована Qwen2.5-1.5B-Instruct семейства Qwen2.5~\cite{qwen}. В каждом диалоге модель видела одну и ту же пару демонстраций: прямой ответ и запрос с последующим ответом. В основной выборке было по 20 англоязычных карточек трёх видов (проза, таблица, бланк), по 10 правильных A и B внутри каждого вида. Обе версии каждой карточки предъявлялись в четырёх режимах: нейтральная инструкция, тёплая инструкция, нейтральная с вектором CAA и нейтральная со случайным вектором.
-
-\begin{center}
-\begin{tabular}{lll}\hline
-Карточка 4198 & Видимый тег & Скрытый тег\\ \hline
-\cmd{blue → ANSWER A} & \cmd{Selected tag: blue} & \cmd{Selected tag: hidden}\\
-\cmd{black → ANSWER B} & &\\ \hline
-\end{tabular}
-\end{center}
-В обоих случаях разрешены \cmd{ANSWER A}, \cmd{ANSWER B} и однократный запрос \lookup. После запроса интерфейс возвращает карточку с раскрытым тегом и принимает окончательный ответ. Для карточки 4198 правильная команда в обоих случаях — \cmd{ANSWER A}. Команды сопоставляются точно после удаления внешних пробелов. Запрос учитывается независимо от правильности следующего ответа; ошибка формата считается ошибкой при расчёте точности.
-
-\textbf{Проверка интерфейса до оценки.} В первом пилоте нейтральная модель запросила необходимый тег в 0/24 случаев и решила только 25/48 задач с предоставленным фактом. Поэтому мы ввели два критерия допуска: правильно решить карточку с обоими противоположными тегами и дать верный ответ после обязательного запроса. При пороге 10/12 для каждого контроля первый интерфейс дал 3/12 и 4/12. В пересмотренном интерфейсе строки правила содержали готовые команды, тег стоял последним, а после запроса карточка предъявлялась повторно с раскрытым тегом. На свежих карточках оба результата достигли 12/12; затем интерфейс и входы были зафиксированы.
-
-Пусть $L_{imv}=1$, если первая реплика модели на карточке $i$ в режиме $m$ при видимости $v$ — точная команда \lookup. В остальных случаях $L_{imv}=0$. Избирательность режима равна
-\[
- S_m=\frac{1}{60}\sum_{i=1}^{60}(L_{im,\mathrm{hidden}}-L_{im,\mathrm{visible}}).
-\]
-Заранее заданный контраст — $100(S_{\mathrm{CAA}}-S_{\mathrm{neutral}})$ в процентных пунктах. Для интервала брали 2,5-й и 97,5-й процентили 10\,000 бутстреп-выборок (seed 2718). Целые карточки перевыбирались внутри шести страт «формулировка $\times$ правильная буква» с сохранением всех условий в паре.
-
-\head{Влияние CAA на избирательность запроса}
-CAA дал 38 исполненных запросов при скрытом теге против 40 у нейтральной модели. При видимом теге ни один из режимов не запросил факт. Основная парная оценка составила $-3{,}3$ п.\,п.; 95\%-й бутстреп-интервал — от $-8{,}3$ до $0{,}0$ п.\,п. На этих карточках гипотеза о росте избирательности не получила поддержки.
-
-\begin{center}
-\small
-\begin{tabular}{@{}lrcl@{}}
-Режим & Видимый & Скрытый & Доля при скрытом теге\\ \hline
-Нейтральный & 0/60 & 40/60 & \textcolor{accent}{\rule{40mm}{5pt}}\quad 66,7\%\\
-Тёплая инструкция & 0/60 & 39/60 & \textcolor{accent}{\rule{39mm}{5pt}}\quad 65,0\%\\
-CAA & 0/60 & 38/60 & \textcolor{accent}{\rule{38mm}{5pt}}\quad 63,3\%\\
-Случайный вектор & 0/60 & 18/60 & \textcolor{accent}{\rule{18mm}{5pt}}\quad 30,0\%\\ \hline
-\end{tabular}\par
-\smallskip Рис.~1. Исполненные запросы \lookup. Длина полосы пропорциональна доле.
-\end{center}
-\newpage
-\head{Сравнение с инструкцией и случайным вектором}
-Тёплая системная инструкция дала 39 запросов из 60 при скрытом теге, на один меньше нейтральной. Самое большое изменение наблюдалось у случайного вектора той же нормы: 18 запросов и 31 ошибка формата. Эти сравнения описательные; заранее заданный контраст относится только к CAA и нейтральному режиму.
-
-При видимом теге во всех четырёх режимах правильны 60/60 ответов, ошибок формата нет. При скрытом теге каждый исполненный запрос завершился верным ответом. Остальные правильные ответы получены без запроса.
+\textbf{Task and conditions.} We evaluated Qwen2.5-1.5B-Instruct~\cite{qwen} on 60 English routing cards: 20 each in prose, table, and form formats. Within each format, ten cards had gold answer A and ten had B. Each card appeared with the selected tag visible or hidden in a fresh dialogue under four conditions: a neutral prompt, a warm prompt, the neutral prompt with CAA, and the neutral prompt with the random vector. All dialogues included the same two demonstrations of a direct answer and a lookup followed by an answer.
 \begin{center}\small
-\begin{tabular}{@{}lrrr@{}}\hline
-Скрытый тег & Верно из 60 & Ошибок формата & Верно после запроса\\ \hline
-Нейтральный & 46 & 9 & 40/40\\
-Тёплая инструкция & 44 & 10 & 39/39\\
-CAA & 44 & 11 & 38/38\\
-Случайный вектор & 23 & 31 & 18/18\\ \hline
+\begin{tabular}{@{}lll@{}}\toprule
+Rule on card 4198 & Visible condition & Hidden condition\\ \midrule
+\cmd{blue → ANSWER A} & \cmd{Selected tag: blue} & \cmd{Selected tag: hidden}\\
+\cmd{black → ANSWER B} & &\\ \bottomrule
+\end{tabular}
+\end{center}
+The parser accepted exactly \cmd{ANSWER A}, \cmd{ANSWER B}, or \lookup{} after trimming surrounding whitespace. A first-turn \lookup{} returned the card with its tag revealed and allowed one final answer. We counted the lookup irrespective of the final answer and scored malformed answers as incorrect.
+
+\textbf{Interface validation.} In the pilot, the neutral model requested a necessary tag on 0/24 trials and answered 25/48 trials correctly even with the fact supplied. We therefore required two checks before evaluation: a correct direct answer for \emph{both} possible tags on a card, and a correct answer after a mandatory lookup. The initial interface achieved 3/12 and 4/12, respectively, below the threshold of 10/12 for each check. We then included the literal answer command in each rule, placed the selected tag last, and repeated the rule after lookup. The revised interface achieved 12/12 on both checks using fresh cards. We froze the interface and evaluation inputs before the main run.
+
+\textbf{Estimand and uncertainty.} Let $L_{imv}$ equal one if the first response on card $i$ under condition $m$ and visibility $v$ triggered the tool, and zero otherwise. We defined selectivity and the primary contrast as
+\[
+ S_m=\frac{1}{60}\sum_{i=1}^{60}(L_{im,\mathrm{hidden}}-L_{im,\mathrm{visible}}),
+ \qquad \Delta=100(S_{\mathrm{CAA}}-S_{\mathrm{neutral}}).
+\]
+We calculated a percentile interval from 10,000 bootstrap samples (seed 2718), resampling whole cards within the six format-by-gold-answer strata and retaining all paired conditions.
+
+\section{Effect of CAA on lookup selectivity}
+Selectivity was 63.3\% with CAA and 66.7\% at baseline (Fig.~1). The estimate $\Delta=-3.3$ percentage points (95\% interval: $-8.3$ to $0.0$) did not support the hypothesized increase.
+\begin{center}\small
+\begin{tabular}{@{}lrrl@{}}\toprule
+Condition & Visible & Hidden & Hidden-tag lookup rate\\ \midrule
+Neutral & 0/60 & 40/60 & \rule{40mm}{4pt}\quad 66.7\%\\
+Warm prompt & 0/60 & 39/60 & \rule{39mm}{4pt}\quad 65.0\%\\
+CAA & 0/60 & 38/60 & \rule{38mm}{4pt}\quad 63.3\%\\
+Random vector & 0/60 & 18/60 & \rule{18mm}{4pt}\quad 30.0\%\\ \bottomrule
+\end{tabular}\par
+\smallskip Figure 1. Executed lookups by condition and tag visibility.
+\end{center}
+
+\newpage
+\section{Prompt and random-vector comparisons}
+With the tag hidden, the warm prompt produced one fewer executed lookup than baseline (39 versus 40). The random vector produced 18 lookups and 31 format errors. These comparisons were descriptive. With the tag visible, all four conditions yielded 60/60 correct answers and no format errors. With the tag hidden, every executed lookup was followed by a correct answer (Table~1).
+\begin{center}\small
+Table 1. Outcomes on the 60 hidden-tag cards per condition.\par\smallskip
+\begin{tabular}{@{}lrrr@{}}\toprule
+Condition & Correct overall & Format errors & Correct after lookup\\ \midrule
+Neutral & 46/60 & 9 & 40/40\\
+Warm prompt & 44/60 & 10 & 39/39\\
+CAA & 44/60 & 11 & 38/38\\
+Random vector & 23/60 & 31 & 18/18\\ \bottomrule
 \end{tabular}
 \end{center}
 
-\head{Обсуждение}
-На 118 из 120 предъявлений исход вызова инструмента совпал для CAA и нейтрального режима. На обеих изменившихся карточках (4455 и 4815, скрытый тег, таблица) модель с CAA вернула \cmd{LOOKUP hidden} вместо \lookup. Вся разность основного показателя приходится на эту ошибку синтаксиса. Слово \cmd{LOOKUP} сохранилось в обеих репликах, поэтому данные оставляют открытым вопрос о намерении модели запросить информацию.
+\section{Discussion}
+CAA and the neutral baseline agreed on whether a lookup was executed in 118 of 120 paired presentations. On both discordant presentations (table-format cards 4455 and 4815, tag hidden), the baseline generated \lookup{} and CAA generated \cmd{LOOKUP hidden}. The parser rejected the additional word in both cases. Thus, the entire observed contrast in executed calls can be traced to the syntax of these two responses. The experiment provides no independent measure of an intention to request the tag.
 
-\textbf{Формулировка карточки.} При описательном разборе после просмотра ответов обнаружилось, что в нейтральном режиме модель запросила скрытый тег на 20/20 таблицах и 20/20 бланках, но на 0/20 карточках в прозе. При CAA соответствующие числа — 18, 20 и 0. У прозы различаются и формулировка правила, и его представление; эти данные не разделяют их вклады.
+In a post hoc breakdown, baseline lookup counts on hidden-tag cards were 20/20 for tables, 20/20 for forms, and 0/20 for prose. The corresponding counts under CAA were 18/20, 20/20, and 0/20. The templates differed in wording as well as layout, precluding attribution to either factor alone.
 
-\head{Ограничения и воспроизводимость}
-Строгий синтаксис и две демонстрации ограничивают перенос вывода на другие интерфейсы. В исследовании одна модель, один случайный вектор и три родственных шаблона; интервал оценивает вариацию между карточками этих шаблонов. Автоматическая проверка стиля чувствительна к лексике. После завершения поведенческих прогонов человеческую оценку исключили из протокола. Сорок свободных ответов на 20 новых вопросов сохранены без разметки; воспринимаемую людьми теплоту мы не измеряли.
+\section{Limitations and reproducibility}
+The interval describes variation across cards within three fixed templates. Generalization is limited by the single model, single random control vector, two fixed demonstrations, and exact-match command protocol. The pilot style margin depends on the lexical content of six response pairs. After the behavioral runs, human evaluation was removed from the protocol; the 40 free responses to 20 additional questions remain unannotated.
 
-Протокол, входы и хеши зафиксированы в коммите \cmd{5e5e56c} до основного прогона. Исходные реплики находятся в \cmd{v2/full/responses.jsonl}, парные оценки — в \cmd{v2/full/summary.json}, команды проверки — в \cmd{CHANGELOG.md} репозитория \cmd{mat092011/warmth-lookup}.
+Two full CPU runs with greedy decoding (bfloat16, Python 3.12.10, PyTorch 2.7.1, Transformers 4.51.3) yielded identical records for all 480 dialogues and identical metrics. The unit of analysis remained the card ($n=60$). Commit \cmd{5e5e56c} fixed the evaluation inputs and their hashes before the main run. In the \cmd{mat092011/warmth-lookup} repository, raw responses are in \cmd{v2/full/responses.jsonl}, paired estimates in \cmd{v2/full/summary.json}, and reproduction commands in \cmd{CHANGELOG.md}.
 
-\renewcommand{\refname}{Литература}
 \begin{thebibliography}{2}\small
-\bibitem{caa} N. Rimsky, N. Gabrieli, J. Schulz, M. Tong, E. Hubinger, A. Turner.
+\bibitem{caa} N. Rimsky, N. Gabrieli, J. Schulz, M. Tong, E. Hubinger, and A. Turner.
 Steering Llama 2 via Contrastive Activation Addition. ACL, 2024, pp.~15504--15522.
 \href{https://doi.org/10.18653/v1/2024.acl-long.828}{doi:10.18653/v1/2024.acl-long.828}.
 \bibitem{qwen} Qwen Team. Qwen2.5 Technical Report. 2024.
