@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1919,
+    "template": "table",
+    "colors": [
+      "brown",
+      "white"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 1067,
+    "template": "form",
+    "colors": [
+      "pink",
+      "blue"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 1756,
+    "template": "prose",
+    "colors": [
+      "white",
+      "yellow"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 1985,
+    "template": "form",
+    "colors": [
+      "pink",
+      "green"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 1989,
+    "template": "table",
+    "colors": [
+      "yellow",
+      "red"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 1028,
+    "template": "table",
+    "colors": [
+      "green",
+      "white"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 1623,
+    "template": "form",
+    "colors": [
+      "orange",
+      "green"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 1694,
+    "template": "form",
+    "colors": [
+      "brown",
+      "pink"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 1800,
+    "template": "prose",
+    "colors": [
+      "white",
+      "red"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 1574,
+    "template": "table",
+    "colors": [
+      "purple",
+      "pink"
+    ],
+    "bays": [
+      "A",
+      "B"
+    ],
+    "gold": "B"
+  },
+  {
+    "id": 1926,
+    "template": "prose",
+    "colors": [
+      "yellow",
+      "purple"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "A"
+  },
+  {
+    "id": 1696,
+    "template": "prose",
+    "colors": [
+      "green",
+      "red"
+    ],
+    "bays": [
+      "B",
+      "A"
+    ],
+    "gold": "B"
+  }
+]
