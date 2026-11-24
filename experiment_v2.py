@@ -3,6 +3,8 @@ import argparse
 import hashlib
 import json
 import random
+import platform
+import subprocess
 from pathlib import Path
 
 import torch
@@ -24,7 +26,10 @@ DEMO = [
 
 
 def digest(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    data = path.read_bytes()
+    if path.suffix != ".pt":
+        data = data.replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()
 
 
 def cards(split):
@@ -114,6 +119,12 @@ def run(stage, out):
         prepare(model, specs["caa"], out)
         return
     items = cards(stage)
+    if stage == "main":
+        if items != json.loads((ROOT / "v2/main-cards.json").read_text()):
+            raise ValueError("Evaluation cards differ from frozen inputs")
+        save_json(out / "manifest.json", dict(commit=subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], text=True).strip(), config=CONFIG, python=platform.python_version(),
+            torch=torch.__version__, dtype="bfloat16", decode="greedy", frozen_sha256=lock))
     save_json(out / "cards.json", items)
     rows = []
     with (out / "responses.jsonl").open("x", encoding="utf-8") as f:

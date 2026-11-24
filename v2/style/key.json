@@ -1,0 +1,206 @@
+{
+  "r1": {
+    "1": {
+      "question": 15,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "2": {
+      "question": 13,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "3": {
+      "question": 16,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "4": {
+      "question": 0,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "5": {
+      "question": 7,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "6": {
+      "question": 11,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "7": {
+      "question": 14,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "8": {
+      "question": 2,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "9": {
+      "question": 3,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "10": {
+      "question": 8,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "11": {
+      "question": 1,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "12": {
+      "question": 9,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "13": {
+      "question": 12,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "14": {
+      "question": 17,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "15": {
+      "question": 4,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "16": {
+      "question": 18,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "17": {
+      "question": 19,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "18": {
+      "question": 6,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "19": {
+      "question": 10,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "20": {
+      "question": 5,
+      "left": "caa",
+      "right": "neutral"
+    }
+  },
+  "r2": {
+    "1": {
+      "question": 16,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "2": {
+      "question": 0,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "3": {
+      "question": 3,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "4": {
+      "question": 2,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "5": {
+      "question": 19,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "6": {
+      "question": 7,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "7": {
+      "question": 9,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "8": {
+      "question": 18,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "9": {
+      "question": 11,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "10": {
+      "question": 17,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "11": {
+      "question": 8,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "12": {
+      "question": 10,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "13": {
+      "question": 14,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "14": {
+      "question": 4,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "15": {
+      "question": 12,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "16": {
+      "question": 13,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "17": {
+      "question": 1,
+      "left": "neutral",
+      "right": "caa"
+    },
+    "18": {
+      "question": 5,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "19": {
+      "question": 6,
+      "left": "caa",
+      "right": "neutral"
+    },
+    "20": {
+      "question": 15,
+      "left": "neutral",
+      "right": "caa"
+    }
+  }
+}
