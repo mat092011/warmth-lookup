@@ -1,0 +1,11 @@
+name: Check archived evidence
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  archived-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Check frozen inputs and trial coverage (no weights or credentials)
+        run: python3 -m unittest -v test_run_health
